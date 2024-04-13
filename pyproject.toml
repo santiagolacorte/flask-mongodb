@@ -1,0 +1,25 @@
+[project]
+description = ""
+name = "flask-mongodb"
+readme = "README.md"
+requires-python = ">=3.10"
+version = "0.0.1"
+
+[tool.ruff]
+extend-include = ["*.ipynb"]
+output-format = "text"
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.ruff.lint.pydocstyle]
+convention = "numpy"
+
+[tool.ruff.lint.mccabe]
+max-complexity = 50
+
+[tool.coverage.run]
+omit = [
+    "*/__init__.py",
+    "*/tests/*",
+]
