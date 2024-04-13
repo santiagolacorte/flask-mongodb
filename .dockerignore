@@ -1,0 +1,22 @@
+# Virtual environment
+.venv
+
+# Cache
+logs
+
+# Git
+.git*
+
+# Tests
+.coverage
+**/__pycache__/*
+**/.pytest_cache/*
+**/htmlcov/*
+**/reports/*
+**/tests/*
+pytest.ini
+requirements-test.txt
+
+# Specific files
+README.md
+Makefile
