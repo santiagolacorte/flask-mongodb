@@ -5,14 +5,14 @@ import pytest
 from src.services.employee import Employee
 
 
-@pytest.fixture
-def employee():
-    """New 'Employee' instance for each test, thus
-    isolating the tests from each other."""
-
-    return Employee("1", "Smith", "Jack")
-
 class TestEmployee:
+    @pytest.fixture
+    def employee(self):
+        """New 'Employee' instance for each test, thus
+        isolating the tests from each other."""
+
+        return Employee("1", "Smith", "Jack")
+
     def test_employee_instance(self, employee):
         # ARRANGE & ACT: Already done through pytest.fixture
 
