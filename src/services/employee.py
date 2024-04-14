@@ -16,7 +16,10 @@ class Employee:
 
 
     def __str__(self) -> str:
-        return f"{self.name} {self.last_name}"
+        if self.name and self.last_name:
+            return f"{self.name} {self.last_name}"
+        else:
+            raise ValueError("Name or Last Name cannot be None")
 
 
     def to_dict(self) -> dict:
